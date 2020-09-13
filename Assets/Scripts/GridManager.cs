@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GridManager : MonoBehaviour
+{
+    public GameObject[] blocks;
+
+    [SerializeField]
+    private int rows = 5;
+    [SerializeField]
+    private int cols = 8;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        GenerateGrid();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void GenerateGrid()
+    {
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < cols; col++)
+            {
+                // Generate block 
+                GameObject tile = Instantiate(blocks[Random.Range(0,blocks.Length)]);
+
+                float posX = col*2f; // Multiply by 2 because the block height is 8px
+                float posY = row/2f; // Divide by 2 because the block width is 32px
+
+                // Block position
+                tile.transform.position = new Vector2(posX, posY);
+
+            }
+        }
+        // Grid Manager position
+        transform.position = new Vector2(0, 0);
+    }
+}
