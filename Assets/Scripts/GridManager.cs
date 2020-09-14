@@ -31,16 +31,21 @@ public class GridManager : MonoBehaviour
             {
                 // Generate block 
                 GameObject tile = Instantiate(blocks[Random.Range(0,blocks.Length)]);
+                // Make the GameObject tile a child of Grid Manager
+                tile.transform.parent = this.transform;
 
-                float posX = col*2f; // Multiply by 2 because the block height is 8px
-                float posY = row/2f; // Divide by 2 because the block width is 32px
+                // Multiply by 2 because the block height is 8px
+                float posX = col*2f; 
+                // Divide by 2 because the block width is 32px
+                float posY = row/2f; 
 
                 // Block position
                 tile.transform.position = new Vector2(posX, posY);
 
             }
         }
+
         // Grid Manager position
-        transform.position = new Vector2(0, 0);
+        transform.position = new Vector2((-cols)+1, 4-(rows/2f));
     }
 }
