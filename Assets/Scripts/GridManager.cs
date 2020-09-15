@@ -33,6 +33,8 @@ public class GridManager : MonoBehaviour
                 GameObject tile = Instantiate(blocks[Random.Range(0,blocks.Length)]);
                 // Make the GameObject tile a child of Grid Manager
                 tile.transform.parent = this.transform;
+                // Add brick script to the gameObject
+                tile.AddComponent<Brick>();
 
                 // Multiply by 2 because the block height is 8px
                 float posX = col*2f; 

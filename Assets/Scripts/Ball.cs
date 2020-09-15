@@ -24,4 +24,11 @@ public class Ball : MonoBehaviour
         transform.position = Vector3.zero;
         rb.velocity = Random.insideUnitCircle.normalized * speed;
     }
+
+    void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.name == "Bottom Collider") {
+            Respawn();
+        }
+    }
 }
