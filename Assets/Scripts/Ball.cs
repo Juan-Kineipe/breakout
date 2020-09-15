@@ -21,6 +21,7 @@ public class Ball : MonoBehaviour
 
     public void Respawn()
     {
-        
+        transform.position = Vector3.zero;
+        rb.velocity = Random.insideUnitCircle.normalized * speed;
     }
 }
