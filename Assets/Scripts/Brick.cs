@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
+    public int score = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class Brick : MonoBehaviour
 
      void OnCollisionEnter2D(Collision2D collision) 
     {
+        GameManager.instance.score += score;
         Destroy(gameObject);
     }
 }
