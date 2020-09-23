@@ -15,6 +15,7 @@ public class GridManager : MonoBehaviour
     void Start()
     {
         GenerateGrid();
+        GameManager.instance.maxScore = rows*cols;
     }
 
     // Update is called once per frame
