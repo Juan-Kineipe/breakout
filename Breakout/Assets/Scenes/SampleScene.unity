@@ -970,10 +970,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 798949976, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
-      propertyPath: m_Mass
-      value: 1000
+    - target: {fileID: 798949975, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
+      propertyPath: sprites.Array.size
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 798949975, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: caf700f6cd2ad6744854f86cf23afa08,
+        type: 3}
+    - target: {fileID: 798949975, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 260ee6b0134e18241855672c4cccb16c,
+        type: 3}
+    - target: {fileID: 798949975, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: f5ff220d0c59bcf499c77a6ed256282f,
+        type: 3}
     - target: {fileID: 510204102044718919, guid: 89d738703bc31c34086a34b6923e3b21,
         type: 3}
       propertyPath: m_Name
@@ -1033,11 +1048,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533305733523338313, guid: 89d738703bc31c34086a34b6923e3b21,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
@@ -1467,6 +1477,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8505797903726850177, guid: 8b338a7165e36c0409056fa512df435c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.19634955
+      objectReference: {fileID: 0}
     - target: {fileID: 25756754963981375, guid: 8b338a7165e36c0409056fa512df435c,
         type: 3}
       propertyPath: m_LocalPosition.x

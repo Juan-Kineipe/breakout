@@ -134,3 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  sprites:
+  - {fileID: 21300000, guid: 3b06ab59d9bb72e48a9c5fee82fc7530, type: 3}
+  - {fileID: 21300000, guid: 3faff4b9f53cf04458fd2b9b0f59b520, type: 3}
+  - {fileID: 21300000, guid: a51bacee10dd4454aa26474212690756, type: 3}
