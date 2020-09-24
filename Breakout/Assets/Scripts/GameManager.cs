@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
     public static GameManager instance;
 
+    private GameObject player;
     private GameObject ball;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+        player = GameObject.FindGameObjectWithTag("Player");
         ball = GameObject.FindGameObjectWithTag("Ball");
     }
 
@@ -35,12 +37,15 @@ public class GameManager : MonoBehaviour
     public void ShowVictory()
     {
         victory.SetActive(true);
+        Destroy(player);
         Destroy(ball);
     }
 
     public void ShowGameOver()
     {
         gameOver.SetActive(true);
+        Destroy(player);
+        Destroy(ball);
     }
 
     public void PlayAgain()

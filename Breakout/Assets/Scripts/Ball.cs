@@ -29,7 +29,6 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.name == "Bottom Collider") {
             GameManager.instance.ShowGameOver();
-            Destroy(gameObject);
         }
     }
 }
