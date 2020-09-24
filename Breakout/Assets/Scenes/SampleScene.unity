@@ -970,6 +970,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 798949976, guid: 89d738703bc31c34086a34b6923e3b21, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 510204102044718919, guid: 89d738703bc31c34086a34b6923e3b21,
         type: 3}
       propertyPath: m_Name
