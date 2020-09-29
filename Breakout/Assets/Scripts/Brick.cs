@@ -20,6 +20,9 @@ public class Brick : MonoBehaviour
      void OnCollisionEnter2D(Collision2D collision) 
     {
         GameManager.instance.score += score;
+        if(GameManager.instance.score == GameManager.instance.maxScore) {
+            GameManager.instance.ShowVictory();
+        }
         Destroy(gameObject);
     }
 }

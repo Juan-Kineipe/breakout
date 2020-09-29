@@ -9,10 +9,13 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public int maxScore;
     public Text scoreText;
+    public AudioClip victoryAudio;
+    public AudioClip gameOverAudio;
     public GameObject victory;
     public GameObject gameOver;
     public static GameManager instance;
 
+    private AudioSource audio;
     private GameObject player;
     private GameObject ball;
 
@@ -22,16 +25,13 @@ public class GameManager : MonoBehaviour
         instance = this;
         player = GameObject.FindGameObjectWithTag("Player");
         ball = GameObject.FindGameObjectWithTag("Ball");
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString();
-
-        if(score == maxScore) {
-            ShowVictory();
-        }
     }
 
     public void ShowVictory()
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         victory.SetActive(true);
         Destroy(player);
         Destroy(ball);
+        audio.PlayOneShot(victoryAudio);
     }
 
     public void ShowGameOver()
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
         Destroy(player);
         Destroy(ball);
+        audio.PlayOneShot(gameOverAudio);
     }
 
     public void PlayAgain()
